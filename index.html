@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/iconfont//iconfont.css">
+    <style>
+    *{
+        margin: 0; 
+        padding: 0;
+    }
+    body{
+        height: 100%;
+        /* overflow: hidden; */
+    }
+    header{
+        width: 100%;
+        position: relative;
+        height: 42px;
+        
+    }
+    header .head-left{
+        float: left;
+        height: 20px;
+        width: 20px;
+        margin-left: 10px;
+        margin-top:10px;}
+
+.head-right span{
+    display: block;
+ 
+
+}
+.icon-left{
+width: 40px;
+height: 40px;
+float: left;
+}
+
+.icon-right{
+width: 20px;
+height: 20px;
+margin-top:10px;
+margin-right:10px;
+float: right;}
+
+.head-left img,.head-right img{
+    width:100%;
+    height:100%;
+}
+
+ header .head-right{
+        float:right;
+        height: 42px;
+        width: 100px;
+ 
+  
+    }
+    .baidu-logo{
+        width: 100%;
+        height: 100px;
+        position: relative;
+   top:0px;
+        left: 0px;
+
+    }
+    .baidu-pic{
+        position:absolute;
+        width: 200px;
+        height: 80px;
+        top:50%;
+        left: 50%;
+        margin-left:-100px;
+        margin-top: -40px;
+        background: url('./images/baidu.png') no-repeat;
+        background-size: 100%;
+ 
+
+    }
+    .inp{
+        width: 100%;
+        height: 48px;
+
+  
+
+    }
+    .inp .inp-search{
+        width: 90%;
+        height: 46px;
+     border: 1px solid #363636;
+     margin: 0 auto;
+ 
+    }
+    .baidu-dow{
+        width: 100%;
+        height: 134x;
+        margin-top:20px; 
+        background-color: #F8F8F8;
+        padding: 10px 0 10px;
+    }
+    .baidu-dow-content{
+        height: 122px;
+        width: 100%;
+   
+        background: #FFFFFF;
+        padding:6px 0 6px;
+        position: relative;
+
+    }
+    .baidu-dow-content-center{
+        width: 220px;
+        height: 122px;
+        margin: 0 auto;
+     
+    }
+    .del{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .content-nav{
+        width: 220px;
+         height: 50px;
+ 
+         line-height: 50px;
+         margin-top:18px;
+    }
+    .content-pic{
+        width: 50px;
+        height: 50px;
+        background: url('./images/baidulogo.png') no-repeat;
+        background-size: 100%;
+        float: left;
+
+
+    }
+    .content-font{
+       height: 50px;
+ font-size:22px;
+       width: 85px;
+       float: left;
+    }
+    .content-btn{
+      
+        height: 32px;
+        width:70px;
+        border-radius: 10px ;
+        border:2px solid #7EB1E8;
+        text-align: center;
+        line-height: 32px;
+        margin-right:10px;
+        margin-top:5px; 
+        color: #7EB1E8;
+    
+
+     float: right;
+    }
+    /* .del{
+        text-align: center;
+        margin-top:5px;
+    } */
+.content-exam{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+.head-nav{
+    display: none;
+   position: fixed;
+    width: 100%;
+    height: 40px;
+    background: #F8F8F8;
+    z-index:999;
+}
+.head-nav li{
+    float: left;
+    width: 65px;
+    height: 40px;
+    text-align: center;
+    line-height:40px;
+}
+.head-nav ul{
+    width:325px ;
+    height: 40px;
+    list-style: none;
+    float: left;
+}
+.head-nav .add{
+    float: right;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.nav-list ul{
+    width: 100%;
+    /* margin-top:40px; */
+    list-style:none;
+
+}
+.nav-list li{
+
+    border-top:1px solid #F0F0F0;
+    width: 90%;
+    margin: 0 auto;
+ 
+}
+.head-nav a{
+    text-decoration: none;
+    color: #666666;
+}
+.nav-list .nav-article{
+  
+    width: 100%;
+    padding-bottom:20.6%;
+    /* background: url('./images/new.png') no-repeat;
+    
+     */
+
+ 
+}
+.nav-list-pic{
+       width: 40%;
+       padding-bottom:20.6%;
+        background: url('./images/new.png') no-repeat;
+        background-size: 100%;
+        float: left;
+
+}
+.nav-list-txt{
+    width: 60%;
+    float: right;
+}
+.abside-content{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.6);
+    position: fixed;
+    /* opacity: 0.3; */
+    z-index: 10;
+ display: none;
+ 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+.abside-content-left{
+    width: 0px;
+    height: 100%;
+    background: #FFFFFF;
+    position: relative;
+    top:0;
+    left:0;
+    padding-top: 10px;
+    /* transition: width 2s;
+-moz-transition: width 2s;	/* Firefox 4 */
+-webkit-transition: width 2s;	/* Safari 和 Chrome */
+-o-transition: width 2s; */
+    /* z-index: 1000; */
+    
+}
+.abside-btn{
+width: 40px;
+height: 40px;
+background: url('./images/baiduleft.png') no-repeat;
+background-size: 100%;
+margin-left: 10px;
+
+}
+.abside-login{
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 60px;
+}
+.abside-pic{
+    width: 60px;
+    height: 60px;
+    background:red url('./images/avatar.jpg') no-repeat;
+    background-size: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    float: left;
+}
+.abside-name{
+    float:left;
+    width: 60px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px;
+    height: 60px;
+}
+.line{
+    width: 260px;
+    height: 1px;
+    background-color: #F8F8F8;
+    margin-top: 25px;
+
+}
+.abside-nav{
+    width: 120px;
+    margin-left: 30px;
+}
+.abside-nav ul{
+    list-style: none;
+}
+.abside-nav span.icon{
+    font-size: 25px;
+}
+.abside-nav li {
+margin-top: 30px;
+}
+.abside-two{
+    position: absolute;
+    left: 0px;
+    bottom:10px;
+  
+}
+.abside-set{
+    width: 50px;
+    height: 60px;
+    float: left;
+    margin-left: 30px;
+}
+.abside-set-pic{
+   margin-left: 5px;
+    font-size: 20px;
+}
+.abside-tmp{
+float: left;
+/* margin-left: 30px; */
+}
+.clearix{
+    clear: both;
+ 
+} 
+#font-bottom{
+    font-size: 12px;
+    color: #cccccc;
+    /* background: #363636; */
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    
+}
+#tmp{
+    margin-top: 2px;
+}
+.active{
+    border-bottom:1px solid  #3388FF;
+}
+.active a{
+    color: #3388FF;
+    
+}
+.nav-list ul{
+    display: none;
+}
+ .nav-list .dis{
+  display: block;  
+}
+.container-c span{
+    font-size: 12px;
+}
+   .container-zhi{
+       color: red;
+   }
+   .container>p{
+       margin-left: 15px;
+   }
+        .container-c{
+            margin-top: 4px;
+        }
+    .container-ying{
+        color: #999999;
+    }
+        .inp-content{
+            width: 80px;
+            height: 46px;
+            float: right;
+            line-height: 46px;
+            font-weight: 800;
+            color: #38f;
+
+        }
+        .inp-pic{
+            width: 30px;
+            height: 30px;
+            background: url('./images/creame.png') no-repeat;
+            background-size: 100%;
+            margin-top: 10px;
+            float: right;
+        }
+        .nav-article p{
+            margin-top: 10px;
+
+        }
+        .dis li{
+            margin-bottom: 10px;
+            /*padding-bottom:10px ;*/
+        }
+    </style>
+</head>
+<body >
+<div class="abside-content">
+    <div class="abside-content-left">
+        <div class="abside-btn"></div>
+        <div class="abside-login">
+            <div class="abside-pic">
+            </div>
+            <div class="abside-name">
+               大华
+            </div>
+            <div class="clearix"></div>
+            
+        </div>
+        <div class="line"></div>
+        <div class="abside-nav">
+<ul>
+    <li><span class="iconfont icon">&#xe627;</span>&nbsp;&nbsp; <span>我的关注</span></li>
+    <li><span class="iconfont icon">&#xe629;</span>&nbsp;&nbsp; <span>我的收藏</span></li>
+    <li><span class="iconfont icon">&#xe653;</span>&nbsp;&nbsp; <span>我的订单</span></li>
+    <li><span class="iconfont icon">&#xe647;</span>&nbsp;&nbsp; <span>皮肤中心</span></li>
+    <li><span class="iconfont  icon">&#xe635;</span>&nbsp;&nbsp; <span>用户反馈</span></li>
+
+  
+</ul>
+
+        </div>
+        <div class="abside-two">
+            <div class="abside-set">
+            <div class="abside-set-pic iconfont" >&#xe60b;</div>
+            <div>设置</div>
+            </div>
+            <div class="abside-tmp"> 
+                <p id="tmp">27°</p> 
+                <div>厦门</div>
+            </div>
+           <div class="clearix"></div>
+           <div class="line"></div>
+            <p id="font-bottom">2019百度出品官方推荐</p>
+
+        </div>
+        
+
+    </div>
+</div>
+        <div class="head-nav">
+                <ul class="head-ul">
+                <li class="active" ><a href="javascript:void(0)" >推荐</a></li>
+                <li><a href="javascript:void(0)">新闻</a></li>
+                <li><a href="javascript:void(0)">娱乐</a></li>
+                <li><a href="javascript:void(0)">生活</a></li>
+                <li><a href="javascript:void(0)">便民</a></li>
+                <!-- <li>历史</li>
+                <li>头条</li>
+                <li>资讯</li>
+                <li>生活</li>
+                <li>大战</li>
+                <li>西瓜</li> -->
+            </ul>
+            <div class="add">+</div>
+            </div>
+        
+    <header>
+        <div class="head-left" ><img src="./images/baiduleft.png" alt=""></div>
+        <div class="head-right">
+            <span class="icon-left">   <img src="./images/baiduflower.png" alt="" /></span>
+        <span class="icon-right"><img src="./images/baiduright.png" alt=""></span></div>
+    </div>    
+    </header>
+    <div class="baidu-logo"><div class="baidu-pic"></div></div>
+    <div class="inp"><div class="inp-search"><div class="inp-content">百度一下</div><div class="inp-pic"></div></div></div>
+    <div class="baidu-dow">
+         <div class="baidu-dow-content">
+          <div class="baidu-dow-content-center">
+              <div class="content-nav">
+              <div class="content-pic" ></div>
+               <div class="content-font" ><h5>百度APP</h5></div>
+                  <div class="content-btn" >打开</div>
+                         </div>
+<p class="content-exam">千万考生都在用的报考神器</p>
+</div>
+<p class="del">X</p>
+    </div>
+    </div>
+    <div class="container">
+        <p>为最牵挂的事情，习近平提出了哪些要求</p>
+        <p class="container-c"><span class="container-zhi">置顶</span>&nbsp;&nbsp;<span class="container-ying">影视新闻网</span></p>
+        <br>
+
+         <div class="nav-list">
+       <ul class="dis">
+          <li>
+            <div class="nav-article">
+                    <p >2019厦门马拉松正式开赛,,亲爱的亲们，你们准备好了吗，跟我们一起嗨起来把！！！哈哈哈</p>
+                <div class="nav-list-pic"></div>
+                     <div class="nav-list-txt">
+                         <p>曾经沧海难为水，除却巫山不是云,落红不是无情</p><span>新华网</span>   </div>
+                     <!-- <div class="clearix"></div>
+                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                    </div>
+                   
+                
+
+            </li>
+
+                    <li>
+                            <div class="nav-article">
+                                    <p>2019厦门马拉松正式开赛</p>
+                                  
+                                    <div class="nav-list-pic"></div>
+                                     <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                     <!-- <div class="clearix"></div>
+                                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                    </div>
+                                   
+                                
+                
+                            </li>
+
+                                    <li>
+                                            <div class="nav-article">
+                                                    <p>2019厦门马拉松正式开赛</p>
+                                                  
+                                                    <div class="nav-list-pic"></div>
+                                                     <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                     <!-- <div class="clearix"></div>
+                                                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                    </div>
+                                                   
+                                                
+                                
+                                            </li>
+
+                                                    <li>
+                                                            <div class="nav-article">
+                                                                    <p>2019厦门马拉松正式开赛</p>
+                                                                  
+                                                                    <div class="nav-list-pic"></div>
+                                                                     <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                     <!-- <div class="clearix"></div>
+                                                                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                    </div>
+                                                                   
+                                                                
+                                                
+                                                            </li>
+
+                                                                    <li>
+                                                                            <div class="nav-article">
+                                                                                    <p>2019厦门马拉松正式开赛</p>
+                                                                                  
+                                                                                    <div class="nav-list-pic"></div>
+                                                                                     <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                     <!-- <div class="clearix"></div>
+                                                                                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                    </div>
+                                                                                   
+                                                                                
+                                                                
+                                                                            </li>
+
+                                                                                    <li>
+                                                                                            <div class="nav-article">
+                                                                                                    <p>2019厦门马拉松正式开赛</p>
+                                                                                                  
+                                                                                                    <div class="nav-list-pic"></div>
+                                                                                                     <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                     <!-- <div class="clearix"></div>
+                                                                                                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                    </div>
+                                                                                                   
+                                                                                                
+                                                                                
+                                                                                            </li>
+
+                                                                                                    <li>
+                                                                                                            <div class="nav-article">
+                                                                                                                    <p>2019厦门马拉松正式开赛</p>
+                                                                                                                  
+                                                                                                                    <div class="nav-list-pic"></div>
+                                                                                                                     <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                     <!-- <div class="clearix"></div>
+                                                                                                                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                    </div>
+                                                                                                                   
+                                                                                                                
+                                                                                                
+                                                                                                            </li>
+
+                                                                                                                    <li>
+                                                                                                                            <div class="nav-article">
+                                                                                                                                    <p>2019厦门马拉松正式开赛</p>
+                                                                                                                                  
+                                                                                                                                    <div class="nav-list-pic"></div>
+                                                                                                                                     <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                                     <!-- <div class="clearix"></div>
+                                                                                                                                     <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                                    </div>
+                                                                                                                                   
+                                                                                                                                
+                                                                                                                
+                                                                                                                            </li>
+
+</ul>
+<ul >
+        <li>
+          <div class="nav-article">
+                  <p>新闻</p>
+                
+                  <div class="nav-list-pic"></div>
+                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                   <!-- <div class="clearix"></div>
+                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                  </div>
+                 
+              
+
+          </li>
+
+                  <li>
+                          <div class="nav-article">
+                                  <p>2019厦门马拉松正式开赛</p>
+                                
+                                  <div class="nav-list-pic"></div>
+                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                   <!-- <div class="clearix"></div>
+                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                  </div>
+                                 
+                              
+              
+                          </li>
+
+                                  <li>
+                                          <div class="nav-article">
+                                                  <p>2019厦门马拉松正式开赛</p>
+                                                
+                                                  <div class="nav-list-pic"></div>
+                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                   <!-- <div class="clearix"></div>
+                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                  </div>
+                                                 
+                                              
+                              
+                                          </li>
+
+                                                  <li>
+                                                          <div class="nav-article">
+                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                
+                                                                  <div class="nav-list-pic"></div>
+                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                   <!-- <div class="clearix"></div>
+                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                  </div>
+                                                                 
+                                                              
+                                              
+                                                          </li>
+
+                                                                  <li>
+                                                                          <div class="nav-article">
+                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                
+                                                                                  <div class="nav-list-pic"></div>
+                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                   <!-- <div class="clearix"></div>
+                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                  </div>
+                                                                                 
+                                                                              
+                                                              
+                                                                          </li>
+    <li>
+                                                                                  <li>
+                                                                                          <div class="nav-article">
+                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                
+                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                  </div>
+                                                                                                 
+                                                                                              
+                                                                              
+                                                                                          </li>
+
+                                                                                                  <li>
+                                                                                                          <div class="nav-article">
+                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                
+                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                  </div>
+                                                                                                                 
+                                                                                                              
+                                                                                              
+                                                                                                          </li>
+
+                                                                                                                  <li>
+                                                                                                                          <div class="nav-article">
+                                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                                
+                                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                                  </div>
+                                                                                                                                 
+                                                                                                                              
+                                                                                                              
+                                                                                                                          </li>
+
+</ul>
+<ul >
+        <li>
+          <div class="nav-article">
+                  <p>2娱乐</p>
+                
+                  <div class="nav-list-pic"></div>
+                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                   <!-- <div class="clearix"></div>
+                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                  </div>
+                 
+              
+
+          </li>
+          <li>
+                  <li>
+                          <div class="nav-article">
+                                  <p>2019厦门马拉松正式开赛</p>
+                                
+                                  <div class="nav-list-pic"></div>
+                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                   <!-- <div class="clearix"></div>
+                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                  </div>
+                                 
+                              
+              
+                          </li>
+                          <li>
+                                  <li>
+                                          <div class="nav-article">
+                                                  <p>2019厦门马拉松正式开赛</p>
+                                                
+                                                  <div class="nav-list-pic"></div>
+                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                   <!-- <div class="clearix"></div>
+                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                  </div>
+                                                 
+                                              
+                              
+                                          </li>
+                                          <li>
+                                                  <li>
+                                                          <div class="nav-article">
+                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                
+                                                                  <div class="nav-list-pic"></div>
+                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                   <!-- <div class="clearix"></div>
+                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                  </div>
+                                                                 
+                                                              
+                                              
+                                                          </li>
+                                                          <li>
+                                                                  <li>
+                                                                          <div class="nav-article">
+                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                
+                                                                                  <div class="nav-list-pic"></div>
+                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                   <!-- <div class="clearix"></div>
+                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                  </div>
+                                                                                 
+                                                                              
+                                                              
+                                                                          </li>
+                                                                          <li>
+                                                                                  <li>
+                                                                                          <div class="nav-article">
+                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                
+                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                  </div>
+                                                                                                 
+                                                                                              
+                                                                              
+                                                                                          </li>
+                                                                                          <li>
+                                                                                                  <li>
+                                                                                                          <div class="nav-article">
+                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                
+                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                  </div>
+                                                                                                                 
+                                                                                                              
+                                                                                              
+                                                                                                          </li>
+                                                                                                          <li>
+                                                                                                                  <li>
+                                                                                                                          <div class="nav-article">
+                                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                                
+                                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                                  </div>
+                                                                                                                                 
+                                                                                                                              
+                                                                                                              
+                                                                                                                          </li>
+                                                                                                                          <li>
+</ul>
+<ul >
+        <li>
+          <div class="nav-article">
+                  <p>生活</p>
+                
+                  <div class="nav-list-pic"></div>
+                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                   <!-- <div class="clearix"></div>
+                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                  </div>
+                 
+              
+
+          </li>
+          <li>
+                  <li>
+                          <div class="nav-article">
+                                  <p>2019厦门马拉松正式开赛</p>
+                                
+                                  <div class="nav-list-pic"></div>
+                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                   <!-- <div class="clearix"></div>
+                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                  </div>
+                                 
+                              
+              
+                          </li>
+                          <li>
+                                  <li>
+                                          <div class="nav-article">
+                                                  <p>2019厦门马拉松正式开赛</p>
+                                                
+                                                  <div class="nav-list-pic"></div>
+                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                   <!-- <div class="clearix"></div>
+                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                  </div>
+                                                 
+                                              
+                              
+                                          </li>
+                                          <li>
+                                                  <li>
+                                                          <div class="nav-article">
+                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                
+                                                                  <div class="nav-list-pic"></div>
+                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                   <!-- <div class="clearix"></div>
+                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                  </div>
+                                                                 
+                                                              
+                                              
+                                                          </li>
+                                                          <li>
+                                                                  <li>
+                                                                          <div class="nav-article">
+                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                
+                                                                                  <div class="nav-list-pic"></div>
+                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                   <!-- <div class="clearix"></div>
+                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                  </div>
+                                                                                 
+                                                                              
+                                                              
+                                                                          </li>
+                                                                          <li>
+                                                                                  <li>
+                                                                                          <div class="nav-article">
+                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                
+                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                  </div>
+                                                                                                 
+                                                                                              
+                                                                              
+                                                                                          </li>
+                                                                                          <li>
+                                                                                                  <li>
+                                                                                                          <div class="nav-article">
+                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                
+                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                  </div>
+                                                                                                                 
+                                                                                                              
+                                                                                              
+                                                                                                          </li>
+                                                                                                          <li>
+                                                                                                                  <li>
+                                                                                                                          <div class="nav-article">
+                                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                                
+                                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                                  </div>
+                                                                                                                                 
+                                                                                                                              
+                                                                                                              
+                                                                                                                          </li>
+                                                                                                                          <li>
+</ul>
+<ul >
+        <li>
+          <div class="nav-article">
+                  <p>便民</p>
+                
+                  <div class="nav-list-pic"></div>
+                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                   <!-- <div class="clearix"></div>
+                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                  </div>
+                 
+              
+
+          </li>
+          <li>
+                  <li>
+                          <div class="nav-article">
+                                  <p>2019厦门马拉松正式开赛</p>
+                                
+                                  <div class="nav-list-pic"></div>
+                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                   <!-- <div class="clearix"></div>
+                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                  </div>
+                                 
+                              
+              
+                          </li>
+                          <li>
+                                  <li>
+                                          <div class="nav-article">
+                                                  <p>2019厦门马拉松正式开赛</p>
+                                                
+                                                  <div class="nav-list-pic"></div>
+                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                   <!-- <div class="clearix"></div>
+                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                  </div>
+                                                 
+                                              
+                              
+                                          </li>
+                                          <li>
+                                                  <li>
+                                                          <div class="nav-article">
+                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                
+                                                                  <div class="nav-list-pic"></div>
+                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                   <!-- <div class="clearix"></div>
+                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                  </div>
+                                                                 
+                                                              
+                                              
+                                                          </li>
+                                                          <li>
+                                                                  <li>
+                                                                          <div class="nav-article">
+                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                
+                                                                                  <div class="nav-list-pic"></div>
+                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                   <!-- <div class="clearix"></div>
+                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                  </div>
+                                                                                 
+                                                                              
+                                                              
+                                                                          </li>
+                                                                          <li>
+                                                                                  <li>
+                                                                                          <div class="nav-article">
+                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                
+                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                  </div>
+                                                                                                 
+                                                                                              
+                                                                              
+                                                                                          </li>
+                                                                                          <li>
+                                                                                                  <li>
+                                                                                                          <div class="nav-article">
+                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                
+                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                  </div>
+                                                                                                                 
+                                                                                                              
+                                                                                              
+                                                                                                          </li>
+                                                                                                          <li>
+                                                                                                                  <li>
+                                                                                                                          <div class="nav-article">
+                                                                                                                                  <p>2019厦门马拉松正式开赛</p>
+                                                                                                                                
+                                                                                                                                  <div class="nav-list-pic"></div>
+                                                                                                                                   <div class="nav-list-txt"> <p>曾经沧海难为水，除却巫山不是云</p><span>新华网</span>   </div>
+                                                                                                                                   <!-- <div class="clearix"></div>
+                                                                                                                                   <div class="nav-h"> <div class="nav-h-left">光明网</div><div class="nav-h-right">X</div></div> -->
+                                                                                                                                  </div>
+                                                                                                                                 
+                                                                                                                              
+                                                                                                              
+                                                                                                                          </li>
+                                                                                                                          <li>
+</ul>
+
+        </div>
+
+    </div>
+    <script src='./js/scorll.js'></script>
+    <script>
+    var headNav=document.getElementsByClassName('head-nav')[0];
+    var navList=document.getElementsByClassName('nav-list')[0];
+    var headLeft=document.getElementsByClassName('head-left')[0];
+    var absideContent=document.getElementsByClassName('abside-content')[0];
+    var absideBtn=document.getElementsByClassName('abside-btn')[0]; 
+    var absideContentLeft=document.getElementsByClassName('abside-content-left')[0];
+    var headUl=document.getElementsByClassName('head-ul')[0];
+    var navLlist=document.getElementsByClassName('nav-list')[0];
+  var Ul=navList.children;
+  
+        // console.log(headUl)
+    var headLi=headUl.children;
+    // console.log(headLi)
+    for(var i=0;i<headLi.length;i++){
+        headLi[i].index=i;
+        headLi[i].onclick=function(){
+       for(var j=0;j<headLi.length;j++){
+        headLi[j].className='';
+        Ul[j].className='';
+
+         }
+           this.className='active';
+           Ul[this.index].className='dis';
+           
+         
+        }
+    }
+   headLeft.onclick=function(){
+    absideContentLeft.style.width='260px';
+     absideContent.style.display='block';
+     document.body.style.overflow='hidden';
+ 
+  }
+absideBtn.onclick=function(){
+    absideContent.style.display='none';
+     document.body.style.overflow='auto';
+}
+
+
+    window.onscroll=function(){
+if(scroll()>=405){
+    headNav.style.display="block";
+    navList.style.marginTop=40+'px';
+}else{
+    headNav.style.display="none";
+    navList.style.marginTop='';
+}
+   }
+ 
+    
+    </script>
+</body>
+</html>
